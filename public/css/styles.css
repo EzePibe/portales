@@ -1,0 +1,340 @@
+@font-face {
+    font-family: 'Tungsten';
+    src: url('../fonts/Tungsten-Bold.otf');
+}
+
+* {
+    scroll-behavior: smooth;
+    text-decoration: none!important;
+}
+
+.tungsten {
+    font-family: 'Tungsten', sans-serif;
+}
+
+#h1-hidden {
+    font-size: 0;
+    position: absolute;
+    top: -1000px;
+    left: -1000px;
+}
+
+.name-user {
+    font-size: 10px; 
+}
+
+#toast-alert {
+    position: absolute;
+    top: 100px;
+    right: 15px;
+}
+
+.red-text {
+    color: #ff4457;
+}
+
+.red-bg {
+    background: #ff4457;
+}
+
+.black-text {
+    color: #0f1922;
+}
+
+.black-bg {
+    background: #0f1922;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+
+/*
+* HOME
+*/
+.home .video {
+	height: 0;
+	overflow: hidden;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	position: relative;
+}
+.home .video iframe, 
+.home .video object, 
+.home .video embed {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.home .omen,
+.home .banner {
+    position: relative;
+}
+
+.home .banner > div {
+    position: absolute;
+    background: rgba(0, 0, 0, .3);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home .btn-play-free {
+    font-size: 20px!important;
+    padding: 5px 20px;
+}
+
+.home h2 {
+    font-family: 'Tungsten', sans-serif;
+    font-size: 50px;
+    margin-bottom: 0;
+}
+
+.home .subtitle {
+    font-size: 18px;
+}
+
+.home #download {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.home .characters {
+    color: white;
+}
+
+.home .characters img {
+    width: 100%;
+    max-width: 360px;
+}
+
+.home .characters .btn {
+    position: absolute;
+    width: 250px;
+    left: calc(50% - 125px);
+    bottom: 100px;
+}
+
+/*
+* LOGIN
+*/
+.form-view {
+    min-height: 75vh;
+}
+
+.form-view .card {
+    width: 100%;
+    max-width: 500px;
+}
+
+/*
+* CHARACTERS
+*/
+.character-card {
+    width: 200px;
+}
+
+.character-page .img-header {
+    background: red;
+    position: relative;
+    margin-bottom: 8%;
+}
+
+.character-page .img-header .img-character {
+    width: 30%;
+    position: absolute;
+    left: 5%;
+    top: 5%;
+}
+
+.character-page .img-header h2 {
+    position: absolute;
+    font-size: 75px;
+    right: 25%;
+    top: calc(50% - 45px);
+    color: white;
+}
+
+.cards-flex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.character-page .card {
+    max-width: 300px;
+    -webkit-transition: box-shadow linear .2s;
+	-moz-transition: box-shadow linear .2s;
+	-ms-transition: box-shadow linear .2s;
+	-o-transition: box-shadow linear .2s;
+	transition: box-shadow linear .2s;
+}
+
+.character-page .card:hover {
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+}
+
+.character-page .card .letter {
+    font-size: 50px;
+}
+
+.character-page h3 {
+    font-size: 32px;
+}
+
+.character-page .container > p {
+    font-size: 14px;
+}
+
+
+@media screen and (min-width: 768px){
+    /*
+    * HOME
+    */
+    .home .btn-play-free {
+        font-size: 30px!important;
+        padding: 5px 20px;
+    }
+
+    .home h2 {
+        font-size: 75px;
+    }
+
+    .home p {
+        font-size: 18px;
+    }
+
+    .home .subtitle {
+        font-size: 20px;
+    }
+
+    .home #download {
+        padding: 75px 0;
+    }
+
+
+    
+    /*
+    * CHARACTERS
+    */
+    .character-page .img-header h2 {
+        font-size: 125px;
+        top: calc(50% - 75px);
+    }
+
+    .character-page h3 {
+        font-size: 40px;
+    }
+    
+    .character-page .container > p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 992px){
+    /*
+    * HOME
+    */
+    .home .btn-play-free {
+        font-size: 36px!important;
+        padding: 10px 25px;
+    }
+
+    .home .omen {
+        position: static;
+    }
+
+    .home .container.d-lg-flex {
+        position: relative;
+    }
+
+    .home .characters .btn {
+        bottom: 25px;
+    }
+
+    .home .container.d-lg-flex > div {
+        width: 50%;
+    }
+
+
+
+    /*
+    * CHARACTERS
+    */
+    .character-page .img-header h2 {
+        font-size: 150px;
+        top: calc(50% - 90px);
+    }
+
+    .character-page h3 {
+        font-size: 50px;
+    }
+
+    .character-page .container > p {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    /*
+    * HOME
+    */
+    .home .btn-play-free {
+        font-size: 40px!important;
+    }
+
+    .home h2 {
+        font-size: 100px;
+    }
+    
+    .home p {
+        font-size: 20px;
+    }
+
+    .home .subtitle {
+        font-size: 22px;
+    }
+
+    
+    .home #download {
+        padding: 100px 0;
+    }
+
+
+
+    /*
+    * CHARACTERS
+    */
+    .character-page .img-header h2 {
+        font-size: 200px;
+        top: calc(50% - 120px);
+    }
+
+    .character-page h3 {
+        font-size: 60px;
+    }
+
+    .character-page .container > p {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+    /*
+    * CHARACTERS
+    */
+    .character-page .card {
+        max-width: 250px;
+    }
+}
