@@ -32,7 +32,6 @@ class Character extends Model
         return [
             'name' => 'required|min:2',
             'role' => 'required|min:2',
-            'image' => 'required|mimes:jpg,webp,png',
             'biography' => 'required|min:2',
             'q_title' => 'required|min:2',
             'q_text' => 'required|min:2',
@@ -49,7 +48,6 @@ class Character extends Model
         return [
             'name.required' => 'El Nombre es obligatorio',
             'role.required' => 'El Rol es obligatorio',
-            'image.required' => 'La imagen es obligatoria',
             'biography.required' => 'La biografía es obligatoria',
             'q_title.required' => 'El título de la habilidad Q es obligatorio',
             'q_text.required' => 'El texto de la habilidad Q es obligatorio',
@@ -62,7 +60,6 @@ class Character extends Model
             
             'name.min' => 'El Nombre debe tener por lo menos 2 caracteres',
             'role.min' => 'El Rol debe tener por lo menos 2 caracteres',
-            'image.mimes' => 'Solo se permiten imagenes del tipo JPG, WEBP y PNG',
             'biography.min' => 'La biografía debe tener por lo menos 2 caracteres',
             'q_title.min' => 'El título de la habilidad Q debe tener por lo menos 2 caracteres',
             'q_text.min' => 'El texto de la habilidad Q debe tener por lo menos 2 caracteres',
@@ -72,6 +69,22 @@ class Character extends Model
             'c_text.min' => 'El texto de la habilidad C debe tener por lo menos 2 caracteres',
             'x_title.min' => 'El título de la habilidad X debe tener por lo menos 2 caracteres',
             'x_text.min' => 'El texto de la habilidad X debe tener por lo menos 2 caracteres',
+        ];
+    } 
+
+    /*
+    * @return Array
+    */
+    public static function rulesImage() {
+        return [
+            'image' => 'required|mimes:jpg,webp,png',
+        ];
+    } 
+    
+    public static function rulesImageTexts() {
+        return [
+            'image.required' => 'La imagen es obligatoria',
+            'image.mimes' => 'Solo se permiten imagenes del tipo JPG, WEBP y PNG',
         ];
     } 
 

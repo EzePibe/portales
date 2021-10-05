@@ -32,6 +32,7 @@
                 <div class="card-body p-2 text-center">
                     <h3 class="card-title tungsten h1 text-uppercase">{{ $character->name }}</h3>
                     @auth
+                        <a href="{{ route('characters.formEdit', ['id' => $character->id]) }}" class="btn btn-link">Editar</a>
                         <form 
                         method="post"
                         action="{{route('characters.delete', ['id' => $character->id])}}"

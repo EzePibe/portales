@@ -63,6 +63,16 @@ Route::post('agentes/crear', [CharactersController::class, 'create'])
     ->name('characters.create')
     ->middleware('auth');
 
+Route::get('agentes/{id}/editar', [CharactersController::class, 'formEdit'])
+    ->name('characters.formEdit')
+    ->whereNumber('id')
+    ->middleware('auth');
+
+Route::put('agentes/{id}/editar', [CharactersController::class, 'edit'])
+    ->name('characters.edit')
+    ->whereNumber('id')
+    ->middleware('auth');
+
 Route::delete('agentes/{id}/eliminar', [CharactersController::class, 'delete'])
     ->name('characters.delete')
     ->whereNumber('id')
