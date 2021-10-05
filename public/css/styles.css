@@ -141,10 +141,6 @@ img {
 /*
 * CHARACTERS
 */
-.character-card {
-    width: 200px;
-}
-
 .character-page .img-header {
     background: red;
     position: relative;
@@ -172,8 +168,9 @@ img {
     flex-wrap: wrap;
 }
 
+.character-card,
 .character-page .card {
-    max-width: 300px;
+    width: 300px;
     -webkit-transition: box-shadow linear .2s;
 	-moz-transition: box-shadow linear .2s;
 	-ms-transition: box-shadow linear .2s;
@@ -181,6 +178,7 @@ img {
 	transition: box-shadow linear .2s;
 }
 
+.character-card:hover,
 .character-page .card:hover {
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
 }
@@ -189,6 +187,7 @@ img {
     font-size: 50px;
 }
 
+.characters-page h2,
 .character-page h3 {
     font-size: 32px;
 }
@@ -233,6 +232,7 @@ img {
         top: calc(50% - 75px);
     }
 
+    .characters-page h2,
     .character-page h3 {
         font-size: 40px;
     }
@@ -277,6 +277,7 @@ img {
         top: calc(50% - 90px);
     }
 
+    .characters-page h2,
     .character-page h3 {
         font-size: 50px;
     }
@@ -321,6 +322,7 @@ img {
         top: calc(50% - 120px);
     }
 
+    .characters-page h2,
     .character-page h3 {
         font-size: 60px;
     }
@@ -335,6 +337,6 @@ img {
     * CHARACTERS
     */
     .character-page .card {
-        max-width: 250px;
+        width: 250px;
     }
 }

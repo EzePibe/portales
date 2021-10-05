@@ -51,9 +51,9 @@
                 </p>
             </div>
             <div class="text-center omen">
-                <button class="btn btn-light red-text fw-bolder">
+                <a href="{{ route('characters.index') }}" class="btn btn-light red-text fw-bolder">
                     VER AGENTES
-                </button>
+                </a>
                 <img src="{{ asset('/imgs/omen.webp') }}" alt="Personaje 'Omen'">
             </div>
         </div>
