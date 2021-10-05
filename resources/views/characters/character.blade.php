@@ -18,13 +18,13 @@
     </section>
 
     <section class="container">
-        <h3 class="tungsten text-uppercase mb-0">Biografía</h3>
+        <h3 class="font-title tungsten text-uppercase mb-0">Biografía</h3>
         <p>
             {{ $character->biography }}
         </p>
     </section>
     <section class="container">
-        <h3 class="tungsten text-uppercase mb-0">Habilidades</h3>
+        <h3 class="font-title tungsten text-uppercase mb-0">Habilidades</h3>
         <p>
             Rol:
             <span class="tungsten text-uppercase h3">
@@ -34,7 +34,7 @@
 
         <div class="cards-flex mb-4">
 
-            <div class="card m-2 p-2">
+            <div class="card transition-shadow m-2 p-2">
                 <div class="card-body text-center">
                     <p class="tungsten text-uppercase letter mb-0">Q</p>
                     <p class="tungsten text-uppercase h1 mb-0">{{ $character->q_title }}</p>
@@ -42,7 +42,7 @@
                 </div>
             </div>
             
-            <div class="card m-2 p-2">
+            <div class="card transition-shadow m-2 p-2">
                 <div class="card-body text-center">
                     <p class="tungsten text-uppercase letter mb-0">E</p>
                     <p class="tungsten text-uppercase h1 mb-0">{{ $character->e_title }}</p>
@@ -50,7 +50,7 @@
                 </div>
             </div>
 
-            <div class="card m-2 p-2">
+            <div class="card transition-shadow m-2 p-2">
                 <div class="card-body text-center">
                     <p class="tungsten text-uppercase letter mb-0">C</p>
                     <p class="tungsten text-uppercase h1 mb-0">{{ $character->c_title }}</p>
@@ -58,7 +58,7 @@
                 </div>
             </div>
 
-            <div class="card m-2 p-2">
+            <div class="card transition-shadow m-2 p-2">
                 <div class="card-body text-center">
                     <p class="tungsten text-uppercase letter mb-0">X</p>
                     <p class="tungsten text-uppercase h1 mb-0">{{ $character->x_title }}</p>

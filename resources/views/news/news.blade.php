@@ -4,14 +4,19 @@
 @section('title', $news->title)
 
 @section('main')
-<div class="container">
-    <h1>{{ $news->title }}</h1>
+<div class="container py-3">
+
+<div class="d-flex justify-content-between align-items-center flex-wrap">
+    <h2 class="font-title tungsten text-uppercase tex-center mb-1">{{ $news->title }}</h2>
+    <p class="text-secondary mb-1">{{ date('d-m-Y', strtotime($news->date)) }}</p>
+</div>
     @if($news->_hasImage())
-        <img src="{{ asset('/storage/imgs/' . $news->image)}}" alt="{{'Novedades de' . $news->title}}">
-    @else
-        <p>gil</p>
+        <div class="mb-4 text-center">
+            <img src="{{ asset('/storage/imgs/' . $news->image)}}" alt="{{'Novedades de' . $news->title}}">
+        </div>
     @endif
-    <p>{!! $news->text !!}</p>
-    <p>{{ $news->date }}</p>
+
+    {!! $news->text !!}
+    
 </div>
 @endsection

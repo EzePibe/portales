@@ -6,7 +6,7 @@
 @section('main')
 <div class="container characters-page">
     <div class="d-flex justify-content-between align-items-center pt-3">
-        <h2 class="tungsten text-uppercase tex-center">Agentes</h2>
+        <h2 class="font-title tungsten text-uppercase tex-center">Agentes</h2>
         @auth
             <a 
                 class="h2 red-text"
@@ -22,7 +22,7 @@
         
     <div class="d-flex justify-content-center justify-content-lg-between flex-wrap">
         @foreach($characters as $character)
-            <div class="card character-card m-4 p-2 pb-0">
+            <div class="card character-card transition-shadow m-4 p-2 pb-0">
                 <a href="{{route('characters.character', ['id' => $character->id])}}">
                     <img 
                         alt="{{ $character->name }}"
