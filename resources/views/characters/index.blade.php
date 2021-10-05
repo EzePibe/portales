@@ -4,34 +4,46 @@
 @section('title', 'Noticias')
 
 @section('main')
-<div>
-    <h2>Agentes</h2>
-    @auth
-        <a href="{{ route('characters.form')}}">Crear Agente</a>
-    @endauth
-        
-    @foreach($characters as $character)
-        <div class="card character-card my-2 mx-auto">
-            <a href="{{route('characters.character', ['id' => $character->id])}}">
-                <img 
-                    alt="{{ $character->name }}"
-                    src="{{ asset('/storage/characters/' . $character->image)}}" 
-                >
+<div class="container">
+    <div class="d-flex justify-content-between align-items-center">
+        <h2>Agentes</h2>
+        @auth
+            <a 
+                class="h2 red-text"
+                href="{{ route('characters.form')}}"
+                data-bs-toggle="tooltip" 
+                data-bs-placement="left" 
+                title="Nuevo Agente"
+            >
+                +
             </a>
-            <div class="card-body p-2 text-center">
-                <h3 class="card-title tungsten h1 text-uppercase">{{ $character->name }}</h3>
-                @auth
-                    <form 
-                    method="post"
-                    action="{{route('characters.delete', ['id' => $character->id])}}"
+        @endauth
+    </div>
+        
+    <div>
+        @foreach($characters as $character)
+            <div class="card character-card my-2 mx-auto">
+                <a href="{{route('characters.character', ['id' => $character->id])}}">
+                    <img 
+                        alt="{{ $character->name }}"
+                        src="{{ asset('/storage/characters/' . $character->image)}}" 
                     >
-                    @csrf
-                    @method('DELETE')
-                        <button class="btn btn-link" type="submit">Eliminar</button>
-                    </form>
-                @endauth
+                </a>
+                <div class="card-body p-2 text-center">
+                    <h3 class="card-title tungsten h1 text-uppercase">{{ $character->name }}</h3>
+                    @auth
+                        <form 
+                        method="post"
+                        action="{{route('characters.delete', ['id' => $character->id])}}"
+                        >
+                        @csrf
+                        @method('DELETE')
+                            <button class="btn btn-link" type="submit">Eliminar</button>
+                        </form>
+                    @endauth
+                </div>
             </div>
-        </div>
-    @endforeach
+        @endforeach
+    </div>
 </div>
 @endsection
