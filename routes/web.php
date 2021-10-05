@@ -40,6 +40,16 @@ Route::get('noticias/{id}', [NewsController::class, 'news_id'])
     ->name('news.news')
     ->whereNumber('id');
 
+Route::get('noticias/{id}/editar', [NewsController::class, 'formEdit'])
+    ->name('news.formEdit')
+    ->whereNumber('id')
+    ->middleware('auth');
+
+Route::put('noticias/{id}/editar', [NewsController::class, 'edit'])
+    ->name('news.edit')
+    ->whereNumber('id')
+    ->middleware('auth');
+
 Route::delete('noticias/{id}/eliminar', [NewsController::class, 'delete'])
     ->name('news.delete')
     ->whereNumber('id')

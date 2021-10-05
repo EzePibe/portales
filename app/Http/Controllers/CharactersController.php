@@ -61,8 +61,8 @@ class CharactersController extends Controller
 
         $character = Character::findOrFail($id);
 
-        if($request->hasFile('portada')) {
-            $file = $request->file('portada');
+        if($request->hasFile('image')) {
+            $file = $request->file('image');
             $image = time() . "." . $file->clientExtension();
             $file->storeAs('characters', $image, 'public');
             $data['image'] = $image;

@@ -3,7 +3,7 @@
     /** @var \App\Models\Character $character */
 ?>
 @extends('layouts.main')
-@section('title', 'Editar el agente $character->name')
+@section('title', 'Editar el agente: ' . $character->name)
 
 @section('main')
 <div class="form-view d-flex justify-content-center align-items-center px-3">

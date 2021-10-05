@@ -30,6 +30,7 @@
                 <td>{{ $news_item->text }}</td>
                 <td>{{ $news_item->date }}</td>
                 <td>
+                    <a href="{{route('news.formEdit', ['id' => $news_item->id])}}" class="btn btn-link">Editar</a>
                     <form 
                         method="post"
                         action="{{route('news.delete', ['id' => $news_item->id])}}"
