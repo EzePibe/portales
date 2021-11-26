@@ -10,13 +10,11 @@
             <h2 class="font-title tungsten text-uppercase tex-center">Noticias</h2>
             @auth
                 <a 
-                    class="h2 red-text"
+                    class="h6 red-text"
                     href="{{ route('news.form')}}"
-                    data-bs-toggle="tooltip" 
-                    data-bs-placement="left" 
-                    title="Nueva Noticia"
                 >
-                    +
+                    <span class="h5">+</span>
+                    NUEVA NOTICIA
                 </a>
             @endauth
         </div>

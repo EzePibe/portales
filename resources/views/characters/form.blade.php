@@ -6,6 +6,7 @@
 <div class="form-view d-flex justify-content-center align-items-center px-3">
     <div class="card my-4">
         <div class="card-body">
+            <h2 class="text-center">Nuevo agente</h2>
             <form action="{{ route('characters.create') }}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">

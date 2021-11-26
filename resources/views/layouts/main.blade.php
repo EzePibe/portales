@@ -25,6 +25,9 @@
                 </button>
                 <div class="collapse navbar-collapse d-sm-flex justify-content-sm-end" id="navbarHeader">
                     <div class="navbar-nav">
+                        <a class="nav-link text-center" href="{{ route('home') }}">
+                            Inicio
+                        </a>
                         <a class="nav-link text-center" href="{{ route('news.index') }}">
                             Noticias
                         </a>

@@ -1,0 +1,17 @@
+Alumno: Ezequiel Guardia
+Carrera: Diseño y Desarrollo Web
+Materia: Portales y Comercio Electr�nico
+Cuatrimestre: 4
+Turno: Noche
+Comisión: A
+Año: 2021
+Docente: Santiago Gallino
+2do Parcial
+
+ADMIN
+User: admin@admin.com
+Pass: admin1
+
+USER
+User: user@user.com
+Pass: user1

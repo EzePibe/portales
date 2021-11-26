@@ -6,6 +6,7 @@
 <div class="form-view d-flex justify-content-center align-items-center px-3">
     <div class="card">
         <div class="card-body">
+        <h2 class="text-center">Nueva noticia</h2>
             <form action="{{ route('news.create') }}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">

@@ -9,18 +9,17 @@
         <h2 class="font-title tungsten text-uppercase tex-center">Agentes</h2>
         @auth
             <a 
-                class="h2 red-text"
+                class="h6 red-text"
                 href="{{ route('characters.form')}}"
-                data-bs-toggle="tooltip" 
-                data-bs-placement="left" 
-                title="Nuevo Agente"
             >
-                +
+                <span class="h5">+</span>
+                NUEVO AGENTE
             </a>
         @endauth
     </div>
         
-    <div class="d-flex justify-content-center justify-content-lg-between flex-wrap">
+    <!-- <div class="d-flex justify-content-center justify-content-lg-between flex-wrap"> -->
+    <div class="d-flex justify-content-center justify-content-xl-start flex-wrap container-characters">
         @foreach($characters as $character)
             <div class="card character-card transition-shadow m-4 p-2 pb-0">
                 <a href="{{route('characters.character', ['id' => $character->id])}}">
