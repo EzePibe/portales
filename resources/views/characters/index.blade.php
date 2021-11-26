@@ -32,16 +32,34 @@
                     <h3 class="card-title tungsten h1 text-uppercase">{{ $character->name }}</h3>
                     @auth
                         <a href="{{ route('characters.formEdit', ['id' => $character->id]) }}" class="btn btn-link">Editar</a>
-                        <form 
-                        method="post"
-                        action="{{route('characters.delete', ['id' => $character->id])}}"
-                        >
-                        @csrf
-                        @method('DELETE')
-                            <button class="btn btn-link" type="submit">Eliminar</button>
-                        </form>
+                        <button class="btn btn-link" type="submit" data-bs-toggle="modal" data-bs-target="#{{ $character->name }}">Eliminar</button>
                     @endauth
                 </div>
+
+                
+                <div class="modal fade" id="{{ $character->name }}" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <p class="modal-title">¿Seguro quieres borrar este agente?</p>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                <form 
+                                    method="post"
+                                    action="{{route('characters.delete', ['id' => $character->id])}}"
+                                >
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="btn red-bg text-light" type="submit">Eliminar</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
         @endforeach
     </div>

@@ -53,6 +53,29 @@ img {
     font-size: 32px;
 }
 
+.fz-0 {
+    font-size: 0;
+}
+
+
+/*
+* FOOTER
+*/
+footer .socials a {
+    color: #fff;
+    width: 24px;
+    height: 24px;
+    margin: 0 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .aclaration {
+    font-size: 12px;
+    max-width: 380px;
+    margin: 0 auto;
+}
 
 
 /*

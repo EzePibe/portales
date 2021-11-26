@@ -47,7 +47,7 @@
                 <h2>TUS AGENTES</h2>
                 <p class="subtitle">LA CREATIVIDAD ES TU MEJOR ARMA</p>
                 <p>
-                    Más allá de las armas y las balas, podrás elegir a un agente dotado de habilidades bersátiles, veloces y letales con las que crearás oportunidades para sobresalir. Ningún agente se jugará igual, ni ningún momento memorable se verá igual.
+                    Más allá de las armas y las balas, podrás elegir a un agente dotado de habilidades versátiles, veloces y letales con las que crearás oportunidades para sobresalir. Ningún agente se jugará igual, ni ningún momento memorable se verá igual.
                 </p>
             </div>
             <div class="text-center omen">
