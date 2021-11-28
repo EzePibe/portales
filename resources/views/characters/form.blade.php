@@ -19,11 +19,27 @@
 
                 <div class="mb-3">
                     <label for="role" class="form-label">Rol</label>
-                    <select class="form-select" id="role" aria-label="Seleccioná un rol" name="role" value="{{ old('role') }}">
-                        <option>Duelista</option>
-                        <option>Iniciador</option>
-                        <option>Centinela</option>
-                        <option>Controlador</option>
+                    <select class="form-select" id="role" aria-label="Seleccioná un rol" name="role">
+                        @if(old('role') == 'Duelista')
+                            <option selected="selected">Duelista</option>
+                        @else
+                            <option>Duelista</option>
+                        @endif
+                        @if(old('role') == 'Iniciador')
+                            <option selected="selected">Iniciador</option>
+                        @else
+                            <option>Iniciador</option>
+                        @endif
+                        @if(old('role') == 'Centinela')
+                            <option selected="selected">Centinela</option>
+                        @else
+                            <option>Centinela</option>
+                        @endif
+                        @if(old('role') == 'Controlador')
+                            <option selected="selected">Controlador</option>
+                        @else
+                            <option>Controlador</option>
+                        @endif
                     </select>
                     @error('role')
                         <div class="text-danger">{{ $message }}</div>

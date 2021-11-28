@@ -18,7 +18,7 @@ class CharactersSeeder extends Seeder
             [
                 'name' => 'Jett',
                 'image' => 'jett.png',
-                'role' => 'duelista',
+                'role' => 'Duelista',
                 'biography' => 'Proviene de corea del sur. el ágil y evasivo estilo de pelea de jett le permite enfrentarse a riesgos que otros no pueden. Es imparable en todos los enfrentamientos y acaba con sus enemigos antes de que sepan qué los atacó.',
                 'q_title' => 'Ráfaga ascendente',
                 'q_text' => 'Propulsa a jett hacia el aire al instante.',
@@ -34,7 +34,7 @@ class CharactersSeeder extends Seeder
             [
                 'name' => 'Raze',
                 'image' => 'raze.png',
-                'role' => 'duelista',
+                'role' => 'Duelista',
                 'biography' => 'Raze llega de brasil con su explosiva personalidad y sus grandes armas. Gracias a su contundente estilo de juego, es muy buena para separar los enemigos atrincherados y para despejar espacios estrechos con una gran cantidad de explosiones.',
                 'q_title' => 'Paquete explosivo',
                 'q_text' => 'Lanza al instante un paquete explosivo que se adhiere a las superficies. Vuelve a usar la habilidad después de desplegar el paquete para detonarlo, lo que dañará y desplazará todo a su alcance. Raze no recibe daño por esta habilidad, pero sí sufrirá daño por caídas si salta muy alto ',
@@ -50,7 +50,7 @@ class CharactersSeeder extends Seeder
             [
                 'name' => 'Breach',
                 'image' => 'breach.png',
-                'role' => 'iniciador',
+                'role' => 'Iniciador',
                 'biography' => 'Breach, el sueco biónico, lanza poderosas ráfagas cinéticas para abrirse paso a la fuerza a través del territorio enemigo. El daño y la interrupción que inflige garantizarán que ninguna pelea sea justa.',
                 'q_title' => 'Fulgor',
                 'q_text' => 'Equipa una carga cegadora y dispara para lanzar una ráfaga de acción rápida a través de una pared. La carga detonará y cegará a todos los jugadores que la vean',
@@ -66,7 +66,7 @@ class CharactersSeeder extends Seeder
             [
                 'name' => 'Omen',
                 'image' => 'omen.png',
-                'role' => 'controlador',
+                'role' => 'Controlador',
                 'biography' => 'Un espectro de la memoria, Omen caza entre las sombras, ciega a los enemigos, se transporta a través del campo de batalla y deja que la paranoia los invada mientras intentan descubrir dónde atacará.',
                 'q_title' => 'Paranoia',
                 'q_text' => 'Lanza proyectil de sombras que reduce el alcance de visión de todos los jugadores a los que alcanza durante un breve periodo. Este proyectil puede atravesar paredes',
@@ -82,7 +82,7 @@ class CharactersSeeder extends Seeder
             [
                 'name' => 'Brimstone',
                 'image' => 'brimstone.png',
-                'role' => 'controlador',
+                'role' => 'Controlador',
                 'biography' => 'Proveniente de estados unidos, brimstone proporciona una constante ventaja para su equipo con su arsenal orbital. Su habilidad otorga información de forma precisa y a distancia, lo que lo hace un comandante sin igual en el campo.',
                 'q_title' => 'La incendiaria',
                 'q_text' => 'Equipa un lanzagranadas incendiario y dispara para lanzar una granada que explota cuando se detiene en el suelo. Esta crea una zona de fuego que permanece en el campo y daña a los enemigos que estén dentro de ella',
@@ -98,7 +98,7 @@ class CharactersSeeder extends Seeder
             [
                 'name' => 'Phoenix',
                 'image' => 'phoenix.png',
-                'role' => 'duelista',
+                'role' => 'Duelista',
                 'biography' => 'Proviene del reino unido. El poder estelar de phoenix se manifiesta en su estilo de combate al incendiar el campo de batalla con sus granadas aturdidoras y cegadoras. Sin importar si cuenta con apoyo o no, participará en la batalla bajo sus propios términos.',
                 'q_title' => 'Destello en curva',
                 'q_text' => 'Equipa un orbe cegador que recorre una trayectoria curva y detona poco después de lanzarlo. Dispara para cambiar la trayectoria del orbe cegador hacia la izquierda. Este detonará y cegará a cualquier jugador que lo vea. Usa el disparo secundario para cambiar su trayectoria hacia la derecha',
@@ -114,7 +114,7 @@ class CharactersSeeder extends Seeder
             [
                 'name' => 'Sage',
                 'image' => 'sage.png',
-                'role' => 'centinela',
+                'role' => 'Centinela',
                 'biography' => 'El bastión de china. Sage proporciona seguridad para sí misma y para su equipo en cualquier lugar. Gracias a su capacidad de revivir a sus compañeros caídos y evitar ataques agresivos, les da un lugar de protección en medio de la caótica pelea.',
                 'q_title' => 'Orbe ralentizador',
                 'q_text' => 'Equipa un orbe de ralentización y dispara para lanzarlo. Este detonará al caer al suelo y creará un campo que permanecerá en la zona y ralentizará a los jugadores que estén dentro de él',
@@ -130,7 +130,7 @@ class CharactersSeeder extends Seeder
             [
                 'name' => 'Sova',
                 'image' => 'sova.png',
-                'role' => 'iniciador',
+                'role' => 'Iniciador',
                 'biography' => 'Proveniente de la tundra del eterno invierno de rusia. Sova rastrea, encuentra y elimina a sus enemigos con gran eficiencia y precisión. Su arco personalizado y sus increíbles habilidades de exploración impedirán que sus enemigos puedan esconderse de él.',
                 'q_title' => 'Proyectil eléctrico',
                 'q_text' => 'Equipa un arco con un proyectil eléctrico y dispara para lanzarlo. El proyectil detonará al impactar y dañará a los jugadores cercanos. Mantén presionado el botón de disparo para aumentar el alcance del proyectil. Usa el disparo secundario para añadir hasta dos rebotes a su trayectoria',
@@ -146,7 +146,7 @@ class CharactersSeeder extends Seeder
             [
                 'name' => 'Viper',
                 'image' => 'viper.png',
-                'role' => 'controlador',
+                'role' => 'Controlador',
                 'biography' => 'Química estadounidense, viper despliega varios artefactos químicos venenosos para controlar el campo de batalla y afectar la visión de los enemigos. Si las toxinas no asesinan a su presa, sin duda lo harán sus juegos mentales.',
                 'q_title' => 'Nube venenosa',
                 'q_text' => 'Equipa un emisor de gas y dispara para lanzarlo. Este permanecerá ahí durante toda la ronda. Vuelve a usar la habilidad para crear una nube de gas tóxica que usa combustible. Puedes volver a usar esta habilidad varias veces y puedes recuperarla para volver a desplegarla',
@@ -162,7 +162,7 @@ class CharactersSeeder extends Seeder
             [
                 'name' => 'Cypher',
                 'image' => 'cypher.png',
-                'role' => 'centinela',
+                'role' => 'Centinela',
                 'biography' => 'Cypher, el agente de información marroquí, es un sistema de vigilancia de un solo hombre que puede monitorear todos los movimientos de sus enemigos. No hay secreto que no descubra ni maniobra que no detecte. Cypher siempre está vigilando.',
                 'q_title' => 'Ciberjaula',
                 'q_text' => 'Lanza al instante una ciberjaula frente a cypher. Actívala para crear una zona que bloquea la visión y ralentiza a los enemigos que la atraviesan',

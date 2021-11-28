@@ -27,7 +27,7 @@
             DESCARGAR GRATIS
         </button>
 
-        <div class="modal fade" id="modalHomeDescarga" tabindex="-1" aria-labelledby="modalHomeDescargaLabel" aria-hidden="true">
+        <div class="modal fade" id="modalHomeDescarga" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="d-flex justify-content-end">
@@ -77,7 +77,7 @@
         @endguest
         
 
-        <div class="modal fade" id="modalHomeNewsletter" tabindex="-1" aria-labelledby="modalHomeNewsletterLabel" aria-hidden="true">
+        <div class="modal fade" id="modalHomeNewsletter" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="d-flex justify-content-end">
