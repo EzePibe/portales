@@ -8,7 +8,7 @@
     <div class="container index-news">
         <div class="d-flex justify-content-between align-items-center pt-3">
             <h2 class="font-title tungsten text-uppercase tex-center">Noticias</h2>
-            @auth
+            @isadmin
                 <a 
                     class="h6 red-text"
                     href="{{ route('news.form')}}"
@@ -16,7 +16,7 @@
                     <span class="h5">+</span>
                     NUEVA NOTICIA
                 </a>
-            @endauth
+            @endisadmin
         </div>
 
         <div class="d-flex justify-content-center justify-content-lg-between flex-wrap">
@@ -42,7 +42,7 @@
                     <div class="card-body pb-0">
                         <h3 class="card-title tungsten text-uppercase">{{ $news_item->title }}</h3>
                     </div>
-                    @auth
+                    @isadmin
                         <div class="d-flex justify-content-around align-items-center">
                             <a href="{{route('news.formEdit', ['id' => $news_item->id])}}" class="btn btn-link">Editar</a>
                             <form 
@@ -54,7 +54,7 @@
                                 <button class="btn btn-link" type="submit">Eliminar</button>
                             </form>
                         </div>
-                    @endauth
+                    @endisadmin
                 </div>
             @endforeach
         </div>

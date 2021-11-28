@@ -89,10 +89,14 @@ Route::delete('agentes/{id}/eliminar', [CharactersController::class, 'delete'])
     ->middleware(['auth', 'check_admin']);
 
 
+
 /*
 * AUTH
 */
-Route::get('/iniciar-sesion', [AuthController::class, 'form'])->name('auth.formLogin');
+Route::get('/registrarse', [AuthController::class, 'formRegister'])->name('auth.formRegister');
+Route::post('/registrarse', [AuthController::class, 'register'])->name('auth.register');
+
+Route::get('/iniciar-sesion', [AuthController::class, 'formLogin'])->name('auth.formLogin');
 Route::post('/iniciar-sesion', [AuthController::class, 'login'])->name('auth.login');
 Route::post('/cerrar-sesion', [AuthController::class, 'logout'])->name('auth.logout');
 

@@ -7,7 +7,7 @@
 <div class="container characters-page">
     <div class="d-flex justify-content-between align-items-center pt-3">
         <h2 class="font-title tungsten text-uppercase tex-center">Agentes</h2>
-        @auth
+        @isadmin
             <a 
                 class="h6 red-text"
                 href="{{ route('characters.form')}}"
@@ -15,7 +15,7 @@
                 <span class="h5">+</span>
                 NUEVO AGENTE
             </a>
-        @endauth
+        @endisadmin
     </div>
         
     <!-- <div class="d-flex justify-content-center justify-content-lg-between flex-wrap"> -->
@@ -30,10 +30,10 @@
                 </a>
                 <div class="card-body p-2 text-center">
                     <h3 class="card-title tungsten h1 text-uppercase">{{ $character->name }}</h3>
-                    @auth
+                    @isadmin
                         <a href="{{ route('characters.formEdit', ['id' => $character->id]) }}" class="btn btn-link">Editar</a>
                         <button class="btn btn-link" type="submit" data-bs-toggle="modal" data-bs-target="#{{ $character->name }}">Eliminar</button>
-                    @endauth
+                    @endisadmin
                 </div>
 
                 

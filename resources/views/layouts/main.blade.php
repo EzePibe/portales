@@ -39,7 +39,7 @@
                             <form action="{{ route('auth.logout')}}" method="post">
                                 @csrf
                                 <button type="submit" class="nav-link btn btn-link mx-auto">
-                                    Logout
+                                    Cerrar Sesión
                                     <span class="name-user">
                                         ({{Auth::user()->name}})
                                     </span>

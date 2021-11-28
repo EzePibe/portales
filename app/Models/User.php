@@ -61,6 +61,25 @@ class User extends Authenticatable
         ];
     } 
 
+    /*
+    * @return Array
+    */
+    public static function rulesWithName() {
+        return [
+            'name' => 'required',
+            'email' => 'required',
+            'password' => 'required',
+        ];
+    } 
+    
+    public static function rulesWithNameTexts() {
+        return [
+            'name.required' => 'El nombre es obligatorio',
+            'email.required' => 'El email es obligatorio',
+            'password.required' => 'La contraseña es obligatoria'
+        ];
+    } 
+
     /**
      * The attributes that are mass assignable.
      *
@@ -68,10 +87,11 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'admin',
         'email',
         'password',
     ];
-
+ 
     /**
      * The attributes that should be hidden for serialization.
      *

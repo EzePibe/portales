@@ -27,9 +27,7 @@
             >
                 DESCARGAR GRATIS
             </button>
-        @endauth
-
-        @guest
+        @elseguest
             <a 
                 href="{{ route('auth.formLogin') }}"
                 class="btn btn-play-free red-bg text-white fw-bolder" 
