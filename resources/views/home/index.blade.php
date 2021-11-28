@@ -44,7 +44,9 @@
         </div>
     </section>
     
-    <section class="button-home-section">
+    <section class="newsletter text-center p-4">
+        <h2>Newsletter</h2>
+        <p>Suscribite a nuestro newsletter para recibir todos los fines de semana en tu email todas las noticias sobre Valorant, eventos, novedades y más.</p>
         @auth
             @if(Auth::user()->newsletter)
                 <button 
@@ -52,7 +54,7 @@
                     data-bs-toggle="modal" 
                     data-bs-target="#modalHomeNewsletter"
                 >
-                    SUSCRIBITE Al NEWSLETTER
+                    SUSCRIBIRSE
                 </button>
             @else
                 <form action="{{ route('newsletter.create') }}" method="post">
@@ -61,22 +63,16 @@
                         type="submit"
                         class="btn btn-play-free red-bg text-white fw-bolder" 
                     >
-                        SUSCRIBITE Al NEWSLETTER
+                        SUSCRIBIRSE
                     </button>
                 </form>
-                <!-- <a 
-                    href="{{ route('newsletter.create') }}"
-                    class="btn btn-play-free red-bg text-white fw-bolder" 
-                >
-                    SUSCRIBITE Al NEWSLETTER
-                </a> -->
             @endif
         @elseguest
             <a 
                 href="{{ route('auth.formLogin') }}"
                 class="btn btn-play-free red-bg text-white fw-bolder" 
             >
-                SUSCRIBITE Al NEWSLETTER
+                SUSCRIBIRSE
             </a>
         @endguest
         

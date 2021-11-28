@@ -149,6 +149,11 @@ footer .aclaration {
     padding: 50px 0;
 }
 
+.home .newsletter {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
 .home .characters {
     color: white;
 }
