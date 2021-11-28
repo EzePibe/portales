@@ -46,13 +46,31 @@
     
     <section class="button-home-section">
         @auth
-            <button 
-                class="btn btn-play-free red-bg text-white fw-bolder" 
-                data-bs-toggle="modal" 
-                data-bs-target="#modalHomeNewsletter"
-            >
-                SUSCRIBITE Al NEWSLETTER
-            </button>
+            @if(Auth::user()->newsletter)
+                <button 
+                    class="btn btn-play-free red-bg text-white fw-bolder" 
+                    data-bs-toggle="modal" 
+                    data-bs-target="#modalHomeNewsletter"
+                >
+                    SUSCRIBITE Al NEWSLETTER
+                </button>
+            @else
+                <form action="{{ route('newsletter.create') }}" method="post">
+                    @csrf
+                    <button 
+                        type="submit"
+                        class="btn btn-play-free red-bg text-white fw-bolder" 
+                    >
+                        SUSCRIBITE Al NEWSLETTER
+                    </button>
+                </form>
+                <!-- <a 
+                    href="{{ route('newsletter.create') }}"
+                    class="btn btn-play-free red-bg text-white fw-bolder" 
+                >
+                    SUSCRIBITE Al NEWSLETTER
+                </a> -->
+            @endif
         @elseguest
             <a 
                 href="{{ route('auth.formLogin') }}"
@@ -70,12 +88,14 @@
                         <button type="button" class="btn-close mt-2 m-2" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body py-0">
-                        <p>Ya te encuentras suscripto al newsletter</p>
+                        <p>Ya estas suscripto al newsletter</p>
                     </div>
                     <div class="modal-footer p-0">
                         <button type="button" class="btn btn-link" data-bs-dismiss="modal">Cerrar</button>
-                        <form action="#">
-                            <button type="button" class="btn btn-link" data-bs-dismiss="modal">Cancelar suscripción</button>
+                        <form action="{{ route('newsletter.delete') }}" method="post">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-link" data-bs-dismiss="modal">Cancelar suscripción</button>
                         </form>
                     </div>
                 </div>

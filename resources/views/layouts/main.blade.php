@@ -35,6 +35,12 @@
                             Agentes
                         </a>
 
+                        @isadmin
+                            <a class="nav-link text-center" href="{{ route('admin.users') }}">
+                                Usuarios
+                            </a>
+                        @endisadmin
+
                         @auth
                             <form action="{{ route('auth.logout')}}" method="post">
                                 @csrf

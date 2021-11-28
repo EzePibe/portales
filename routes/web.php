@@ -5,6 +5,7 @@ use App\Http\Controllers\NewsController;
 use App\Http\Controllers\CharactersController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\NewsletterController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -92,6 +93,17 @@ Route::delete('agentes/{id}/eliminar', [CharactersController::class, 'delete'])
 
 
 /*
+* NEWSLETTER
+*/
+Route::post('newsletter-suscribirse', [NewsletterController::class, 'create'])
+    ->name('newsletter.create')
+    ->middleware(['auth']);
+Route::delete('newsletter-cancelar', [NewsletterController::class, 'delete'])
+    ->name('newsletter.delete')
+    ->middleware(['auth']);
+
+
+/*
 * AUTH
 */
 Route::get('/registrarse', [AuthController::class, 'formRegister'])->name('auth.formRegister');
@@ -105,8 +117,7 @@ Route::post('/cerrar-sesion', [AuthController::class, 'logout'])->name('auth.log
 /*
 * ADMIN
 */
-Route::get('/admin', [AdminController::class, 'index'])
-    ->name('admin')
+Route::get('/usuarios', [AdminController::class, 'index'])
+    ->name('admin.users')
     ->middleware(['auth', 'check_admin']);
-    
 
