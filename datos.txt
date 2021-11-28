@@ -12,6 +12,20 @@ ADMIN
 User: admin@admin.com
 Pass: admin1
 
-USER
-User: user@user.com
-Pass: user1
+USERS
+{
+    User: user1@user1.com
+    Pass: user1
+}
+{
+    User: user2@user2.com
+    Pass: user2
+}
+{
+    User: user3@user3.com
+    Pass: user3
+}
+{
+    User: user4@user4.com
+    Pass: user4
+}
