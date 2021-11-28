@@ -19,9 +19,25 @@
     </section>
 
     <section class="black-bg" id="download">
-        <button class="btn btn-play-free red-bg text-white fw-bolder" data-bs-toggle="modal" data-bs-target="#modalHome">
-            DESCARGAR GRATIS
-        </button>
+        @auth
+            <button 
+                class="btn btn-play-free red-bg text-white fw-bolder" 
+                data-bs-toggle="modal" 
+                data-bs-target="#modalHome"
+            >
+                DESCARGAR GRATIS
+            </button>
+        @endauth
+
+        @guest
+            <a 
+                href="{{ route('auth.formLogin') }}"
+                class="btn btn-play-free red-bg text-white fw-bolder" 
+            >
+                DESCARGAR GRATIS
+            </a>
+        @endguest
+        
 
         <div class="modal fade" id="modalHome" tabindex="-1" aria-labelledby="modalHomeLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
@@ -30,8 +46,7 @@
                         <button type="button" class="btn-close mt-2 m-2" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body py-0">
-                        <p class="m-0">Para descargar el juego primero debe aprobar al alumno ♡</p>
-                        <p>Si ya lo hizo, comuniquese con él para pedirle el link</p>
+                        <p>Aca debería descargarse el juego</p>
                     </div>
                     <div class="modal-footer p-0">
                         <button type="button" class="btn btn-link" data-bs-dismiss="modal">Cerrar</button>

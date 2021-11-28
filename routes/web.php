@@ -30,11 +30,11 @@ Route::get('noticias', [NewsController::class, 'index'])
 
 Route::get('noticias/crear', [NewsController::class, 'form'])
     ->name('news.form')
-    ->middleware('auth');
+    ->middleware(['auth', 'check_admin']);
 
 Route::post('noticias/crear', [NewsController::class, 'create'])
     ->name('news.create')
-    ->middleware('auth');
+    ->middleware(['auth', 'check_admin']);
 
 Route::get('noticias/{id}', [NewsController::class, 'news_id'])
     ->name('news.news')
@@ -43,17 +43,17 @@ Route::get('noticias/{id}', [NewsController::class, 'news_id'])
 Route::get('noticias/{id}/editar', [NewsController::class, 'formEdit'])
     ->name('news.formEdit')
     ->whereNumber('id')
-    ->middleware('auth');
+    ->middleware(['auth', 'check_admin']);
 
 Route::put('noticias/{id}/editar', [NewsController::class, 'edit'])
     ->name('news.edit')
     ->whereNumber('id')
-    ->middleware('auth');
+    ->middleware(['auth', 'check_admin']);
 
 Route::delete('noticias/{id}/eliminar', [NewsController::class, 'delete'])
     ->name('news.delete')
     ->whereNumber('id')
-    ->middleware('auth');
+    ->middleware(['auth', 'check_admin']);
 
 /*
 * CHARACTERS
@@ -67,26 +67,26 @@ Route::get('agentes/{id}', [CharactersController::class, 'character'])
 
 Route::get('agentes/crear', [CharactersController::class, 'form'])
     ->name('characters.form')
-    ->middleware('auth');
+    ->middleware(['auth', 'check_admin']);
 
 Route::post('agentes/crear', [CharactersController::class, 'create'])
     ->name('characters.create')
-    ->middleware('auth');
+    ->middleware(['auth', 'check_admin']);
 
 Route::get('agentes/{id}/editar', [CharactersController::class, 'formEdit'])
     ->name('characters.formEdit')
     ->whereNumber('id')
-    ->middleware('auth');
+    ->middleware(['auth', 'check_admin']);
 
 Route::put('agentes/{id}/editar', [CharactersController::class, 'edit'])
     ->name('characters.edit')
     ->whereNumber('id')
-    ->middleware('auth');
+    ->middleware(['auth', 'check_admin']);
 
 Route::delete('agentes/{id}/eliminar', [CharactersController::class, 'delete'])
     ->name('characters.delete')
     ->whereNumber('id')
-    ->middleware('auth');
+    ->middleware(['auth', 'check_admin']);
 
 
 /*
