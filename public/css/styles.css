@@ -8,6 +8,11 @@
     text-decoration: none!important;
 }
 
+body {
+    position: relative;
+    min-height: 100vh;
+}
+
 .tungsten {
     font-family: 'Tungsten', sans-serif;
 }
@@ -61,6 +66,13 @@ img {
 /*
 * FOOTER
 */
+/* footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+} */
+
 footer .socials a {
     color: #fff;
     width: 24px;
@@ -157,7 +169,7 @@ footer .aclaration {
 * LOGIN
 */
 .form-view {
-    min-height: 75vh;
+    min-height: 70vh;
 }
 
 .form-view .card {
@@ -248,6 +260,17 @@ footer .aclaration {
 
 
 @media screen and (min-width: 768px){
+    body {
+        padding-bottom: 230px;
+    }
+    
+    footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+    }
+
     .font-title {
         font-size: 40px;
     }

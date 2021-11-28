@@ -59,5 +59,8 @@
             @endforeach
         </div>
     </div>
+    <div class="d-flex justify-content-center align-items-center pt-4">
+        {{ $news->links() }}
+    </div>
 </div>
 @endsection
