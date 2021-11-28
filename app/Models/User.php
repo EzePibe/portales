@@ -41,6 +41,12 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+    public function newsletter() 
+    {
+        // return $this->belongsTo(Newsletter::class, 'user_id', 'id');
+        return $this->belongsTo(Newsletter::class, 'id', 'user_id');
+    }
+
     /*
     * @return Array
     */

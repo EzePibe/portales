@@ -18,26 +18,16 @@
         </div>
     </section>
 
-    <section class="black-bg" id="download">
-        @auth
-            <button 
-                class="btn btn-play-free red-bg text-white fw-bolder" 
-                data-bs-toggle="modal" 
-                data-bs-target="#modalHome"
-            >
-                DESCARGAR GRATIS
-            </button>
-        @elseguest
-            <a 
-                href="{{ route('auth.formLogin') }}"
-                class="btn btn-play-free red-bg text-white fw-bolder" 
-            >
-                DESCARGAR GRATIS
-            </a>
-        @endguest
-        
+    <section class="black-bg button-home-section" id="download">
+        <button 
+            class="btn btn-play-free red-bg text-white fw-bolder" 
+            data-bs-toggle="modal" 
+            data-bs-target="#modalHomeDescarga"
+        >
+            DESCARGAR GRATIS
+        </button>
 
-        <div class="modal fade" id="modalHome" tabindex="-1" aria-labelledby="modalHomeLabel" aria-hidden="true">
+        <div class="modal fade" id="modalHomeDescarga" tabindex="-1" aria-labelledby="modalHomeDescargaLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="d-flex justify-content-end">
@@ -53,6 +43,46 @@
             </div>
         </div>
     </section>
+    
+    <section class="button-home-section">
+        @auth
+            <button 
+                class="btn btn-play-free red-bg text-white fw-bolder" 
+                data-bs-toggle="modal" 
+                data-bs-target="#modalHomeNewsletter"
+            >
+                SUSCRIBITE Al NEWSLETTER
+            </button>
+        @elseguest
+            <a 
+                href="{{ route('auth.formLogin') }}"
+                class="btn btn-play-free red-bg text-white fw-bolder" 
+            >
+                SUSCRIBITE Al NEWSLETTER
+            </a>
+        @endguest
+        
+
+        <div class="modal fade" id="modalHomeNewsletter" tabindex="-1" aria-labelledby="modalHomeNewsletterLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="d-flex justify-content-end">
+                        <button type="button" class="btn-close mt-2 m-2" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body py-0">
+                        <p>Ya te encuentras suscripto al newsletter</p>
+                    </div>
+                    <div class="modal-footer p-0">
+                        <button type="button" class="btn btn-link" data-bs-dismiss="modal">Cerrar</button>
+                        <form action="#">
+                            <button type="button" class="btn btn-link" data-bs-dismiss="modal">Cancelar suscripción</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
 
     <section class="characters red-bg pt-4 ">
         <div class="container d-lg-flex flex-lg-row-reverse">

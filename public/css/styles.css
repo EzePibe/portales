@@ -142,7 +142,7 @@ footer .aclaration {
     font-size: 18px;
 }
 
-.home #download {
+.home .button-home-section {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -296,7 +296,7 @@ footer .aclaration {
         font-size: 20px;
     }
 
-    .home #download {
+    .home .button-home-section {
         padding: 75px 0;
     }
 
@@ -386,7 +386,7 @@ footer .aclaration {
     }
 
     
-    .home #download {
+    .home .button-home-section {
         padding: 100px 0;
     }
 
