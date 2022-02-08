@@ -6,6 +6,7 @@ use App\Http\Controllers\CharactersController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\NewsletterController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -90,7 +91,24 @@ Route::delete('agentes/{id}/eliminar', [CharactersController::class, 'delete'])
     ->whereNumber('id')
     ->middleware(['auth', 'check_admin']);
 
+/*
+* PROFILE
+*/
+Route::get('perfil', [UserController::class, 'index'])
+    ->name('user.index')
+    ->middleware(['auth']);
 
+Route::get('perfil/editar-contraseña', [UserController::class, 'formPassword'])
+    ->name('user.formPassword')
+    ->middleware(['auth']);
+
+Route::put('perfil/editar', [UserController::class, 'edit'])
+    ->name('user.edit')
+    ->middleware(['auth']);
+
+Route::put('perfil/editar-contraseña', [UserController::class, 'editPassword'])
+    ->name('user.editPassword')
+    ->middleware(['auth']);
 
 /*
 * NEWSLETTER

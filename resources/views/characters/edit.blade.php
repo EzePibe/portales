@@ -22,7 +22,7 @@
 
                 <div class="mb-3">
                     <label for="role" class="form-label">Rol</label>
-                    <select class="form-select" id="role" aria-label="Seleccioná un rol" name="role" selected="{{ old('role', $character->role) }}">
+                    <select class="form-select" id="role" aria-label="Seleccioná un rol" name="role">
                         @if(old('role', $character->role) == 'Duelista')
                             <option selected="selected">Duelista</option>
                         @else

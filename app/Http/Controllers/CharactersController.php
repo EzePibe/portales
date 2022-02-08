@@ -66,13 +66,11 @@ class CharactersController extends Controller
             $image = time() . "." . $file->clientExtension();
             $file->storeAs('characters', $image, 'public');
             $data['image'] = $image;
-            $lastImage = $character->image; // Guardamos el nombre "viejo" para poder eliminarla.
+            $lastImage = $character->image;
         }
 
-        // Editamos.
         $character->update($data);
 
-        // Si no hubo error de edición, eliminamos la imagen anterior, si la cambiaron.
         if($request->hasFile('image')) {
             unlink(public_path('storage/characters/' . $lastImage));
         }

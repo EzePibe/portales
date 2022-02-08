@@ -42,6 +42,10 @@
                         @endisadmin
 
                         @auth
+                            <a class="nav-link text-center" href="{{ route('user.index') }}">
+                                Mi Perfíl
+                            </a>
+
                             <form action="{{ route('auth.logout')}}" method="post">
                                 @csrf
                                 <button type="submit" class="nav-link btn btn-link mx-auto">
@@ -59,9 +63,6 @@
             </div>
         </nav>
     </header>
-
-    
-
     <!-- <main class="container my-4"> -->
     <main>
         @yield('main')

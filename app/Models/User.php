@@ -41,6 +41,7 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+
     public function newsletter() 
     {
         // return $this->belongsTo(Newsletter::class, 'user_id', 'id');
@@ -64,6 +65,25 @@ class User extends Authenticatable
         return [
             'email.required' => 'El email es obligatorio',
             'password.required' => 'La contraseña es obligatoria'
+        ];
+    } 
+    /*
+    * @return Array
+    */
+    public static function rulesEdit() {
+        return [
+            'name' => 'required',
+            'email' => 'required',
+        ];
+    } 
+    
+    /*
+    * @return Array
+    */
+    public static function rulesEditTexts() {
+        return [
+            'name.required' => 'El nombre es obligatorio',
+            'email.required' => 'El email es obligatorio',
         ];
     } 
 

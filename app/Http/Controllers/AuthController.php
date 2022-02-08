@@ -37,28 +37,6 @@ class AuthController extends Controller
         return redirect()->route('home')
         ->with('message.success', 'Inicio de sesión exitoso');
     }
-    
-    /* public function register(Request $request) {
-        $credentials = [
-            'name' => $request->input('name'),
-            'email' => $request->input('email'),
-            'password' => $request->input('password'),
-        ];
-
-        $request->validate(
-            User::rules(),
-            User::rulesTexts()
-        );
-
-        if(!Auth::attempt($credentials)) {
-            return redirect()->route('auth.formLogin')
-            ->with('message.error', 'Usuario y/o contraseña inválidos')
-            ->withInput();
-        }
-        
-        return redirect()->route('home')
-        ->with('message.success', 'Inicio de sesión exitoso');
-    } */
 
     public function register(Request $request) {
         $data  = $request->all();
